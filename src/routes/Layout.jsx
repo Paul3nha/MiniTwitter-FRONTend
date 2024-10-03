@@ -1,12 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
+import { useUser } from "../UserContext.jsx";
 
 export const Layout = () => {
+  const [user] = useUser();
+
   return (
     <>
-      <header>
+      <header id="header">
         <Link to="/">Twitter Page</Link>
-        <Link to="/users">Users</Link>
-        <Link to="/tweets">Tweets</Link>
+        {user ? (
+          <span>Bienvenido, {user}</span>
+        ) : (
+          <Link to="users/login">Login</Link>
+        )}
+        <Link to="tweets">Tweets</Link>
       </header>
       <Outlet />
     </>

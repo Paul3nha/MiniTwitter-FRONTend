@@ -18,10 +18,10 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="users" element={<Users />}>
-            <Route path="login" element={<Login />}></Route>
-            <Route path="register" element={<Register />}></Route>
-            <Route path=":userId" element={<Profile />}></Route>
-            <Route path="avatar" element={<ChangeAvatar />}></Route>
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path=":userId" element={<Profile />} />
+            <Route path="avatar" element={<ChangeAvatar />} />
           </Route>
           <Route path="tweets" element={<Tweets />}>
             <Route path="user/:userId" element={<TweetsByUser />}></Route>
