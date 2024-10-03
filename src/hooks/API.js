@@ -1,6 +1,7 @@
 import { useFetch } from "./useFetch.js";
 
-export const useEntries = () => useFetch("https://dsvccv");
+export const useTweets = () =>
+  useFetch("https://minitwitter-paulenha.up.railway.app/tweets");
 
 export const useRegister = () => useFetch("https://davwa");
 
